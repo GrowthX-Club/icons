@@ -1,0 +1,13 @@
+<svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="-0.6" y="0.6" width="10.8" height="2.8" rx="1.4" transform="matrix(-1 0 0 1 25.8 13)"
+        fill="var(--primary-fill, black)"
+        stroke="var(--primary-stroke, black)"
+        stroke-width="var(--primary-stroke-width, 1.2)" />
+    <rect x="-0.6" y="0.6" width="8.8" height="2.8" rx="1.4" transform="matrix(-1 0 0 1 23.8 20)"
+        fill="var(--primary-fill, black)"
+        stroke="var(--primary-stroke, black)"
+        stroke-width="var(--primary-stroke-width, 1.2)" />
+    <path d="M12 11V27" fill="var(--primary-fill, none)"
+        stroke="var(--primary-stroke, black)"
+        stroke-width="var(--primary-stroke-width, 1.2)" stroke-linecap="round" />
+</svg>

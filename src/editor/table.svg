@@ -1,0 +1,21 @@
+<svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="8.57391" y="10.5739" width="20.8522" height="17.0261" rx="3.25217"
+        fill="var(--primary-fill, none)"
+        stroke="var(--primary-stroke, black)"
+        stroke-width="var(--primary-stroke-width, 1.14783)" />
+    <path d="M13.7393 15.739L13.7393 27.2173" fill="var(--primary-fill, none)"
+        stroke="var(--primary-stroke, black)"
+        stroke-width="var(--primary-stroke-width, 1.14783)" />
+    <path d="M29.0439 15.739L8.00047 15.739" fill="var(--primary-fill, none)"
+        stroke="var(--primary-stroke, black)"
+        stroke-width="var(--primary-stroke-width, 1.14783)" />
+    <path d="M29.0439 21.4783H13.7396" fill="var(--primary-fill, none)"
+        stroke="var(--primary-stroke, black)"
+        stroke-width="var(--primary-stroke-width, 1.14783)" />
+    <path d="M18.5215 15.739V27.2173" fill="var(--primary-fill, none)"
+        stroke="var(--primary-stroke, black)"
+        stroke-width="var(--primary-stroke-width, 1.14783)" />
+    <path d="M23.3047 15.739V27.2173" fill="var(--primary-fill, none)"
+        stroke="var(--primary-stroke, black)"
+        stroke-width="var(--primary-stroke-width, 1.14783)" />
+</svg>

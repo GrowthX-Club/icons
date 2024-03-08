@@ -1,0 +1,18 @@
+<svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="9" y="19" width="8" height="1.2" rx="0.6"
+        fill="var(--primary-fill, black)"
+        stroke="var(--primary-stroke, none)"
+        stroke-width="var(--primary-stroke-width, 0)" />
+    <rect x="21" y="19" width="8" height="1.2" rx="0.6"
+        fill="var(--primary-fill, black)"
+        stroke="var(--primary-stroke, none)"
+        stroke-width="var(--primary-stroke-width, 0)" />
+    <circle cx="19" cy="13" r="2"
+        fill="var(--primary-fill, black)"
+        stroke="var(--primary-stroke, none)"
+        stroke-width="var(--primary-stroke-width, 0)" />
+    <circle cx="19" cy="26" r="2"
+        fill="var(--primary-fill, black)"
+        stroke="var(--primary-stroke, none)"
+        stroke-width="var(--primary-stroke-width, 0)" />
+</svg>

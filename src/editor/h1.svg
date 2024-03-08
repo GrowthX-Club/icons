@@ -1,0 +1,7 @@
+<svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+        d="M12.8091 23V13.6909H14.7773V17.5318H18.7727V13.6909H20.7364V23H18.7727V19.1545H14.7773V23H12.8091ZM26.4825 13.6909V23H24.5144V15.5591H24.4598L22.328 16.8955V15.15L24.6325 13.6909H26.4825Z"
+        fill="var(--primary-fill, black)"
+        stroke="var(--primary-stroke, none)"
+        stroke-width="var(--primary-stroke-width, 0)" />
+</svg>
