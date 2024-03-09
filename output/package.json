@@ -1,0 +1,21 @@
+{
+  "name": "@growthx-club/icons",
+  "version": "1.0.1",
+  "description": "Package for storing all the icons used across the GrowthX Platform",
+  "type": "module",
+  "repository": {
+    "url": "https://github.com/GrowthX-Club/icons"
+  },
+  "keywords": [
+    "icons"
+  ],
+  "author": "GrowthX",
+  "license": "ISC",
+  "publishConfig": {
+    "@growthx-club:registry": "https://npm.pkg.github.com"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "@types/react": "^18.2.64"
+  }
+}
