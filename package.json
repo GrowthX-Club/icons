@@ -8,7 +8,7 @@
     "url": "https://github.com/GrowthX-Club/icons"
   },
   "scripts": {
-    "convert-svg": "svgr src --out-dir output --typescript --jsx-runtime automatic --template template.cjs --expand-props none"
+    "convert-svg": "svgr src --out-dir output --typescript --jsx-runtime automatic --template template.cjs --expand-props none --no-dimensions"
   },
   "keywords": [
     "icons"
