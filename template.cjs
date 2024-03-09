@@ -11,19 +11,20 @@ const template = (
   { tpl }
 ) => {
   const wrappedJsx = jsxElement(
-    jsxOpeningElement(jsxIdentifier('SvgIcon'), [
+    jsxOpeningElement(jsxIdentifier('Box'), [
       jsxSpreadAttribute(identifier('props')),
     ]),
-    jsxClosingElement(jsxIdentifier('SvgIcon')),
+    jsxClosingElement(jsxIdentifier('Box')),
     [jsx],
     false
   );
 
   return tpl`${imports}
-import SvgIcon, { SvgIconProps } from '@mui/material/SvgIcon';
+import Box,{ BoxProps } from '@mui/material/Box';
+
 ${interfaces}
 
-function ${componentName}(props: SvgIconProps) {
+function ${componentName}(props: BoxProps) {
   return ${wrappedJsx};
 }
 
