@@ -18,9 +18,10 @@ jobs:
         with:
           node-version: 18
           registry-url: https://npm.pkg.github.com/
-      - run: npm ci
+      - run: npm ci;
       - run: npm run convert-svg
-      - run: npm run build
+      - run: cd output;npm ci;npm run build
+      - run: cd ..
       - run: cp output/package.json dist/
       - run: npm publish ./dist
         env:

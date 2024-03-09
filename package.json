@@ -8,8 +8,7 @@
     "url": "https://github.com/GrowthX-Club/icons"
   },
   "scripts": {
-    "convert-svg": "svgr src --out-dir output --typescript --jsx-runtime automatic --template template.cjs",
-    "build": "tsc --project output --outDir dist"
+    "convert-svg": "svgr src --out-dir output --typescript --jsx-runtime automatic --template template.cjs --expand-props none"
   },
   "keywords": [
     "icons"
@@ -26,7 +25,7 @@
     "singleQuote": true
   },
   "peerDependencies": {
-    "react": "^18.2.0",
-    "@types/react": "^18.2.64"
+    "@types/react": "^18.2.64",
+    "react": "^18.2.0"
   }
 }

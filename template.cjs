@@ -1,14 +1,33 @@
-const template = (variables, { tpl }) => {
-  return tpl`
-  ${variables.imports};
-  
-  ${variables.interfaces};
-  
-  const ${variables.componentName} = (${variables.props}) => (
-    ${variables.jsx}
+const {
+  identifier,
+  jsxClosingElement,
+  jsxElement,
+  jsxIdentifier,
+  jsxOpeningElement,
+  jsxSpreadAttribute,
+} = require('@babel/types');
+const template = (
+  { imports, interfaces, componentName, props, jsx, exports },
+  { tpl }
+) => {
+  const wrappedJsx = jsxElement(
+    jsxOpeningElement(jsxIdentifier('SvgIcon'), [
+      jsxSpreadAttribute(identifier('props')),
+    ]),
+    jsxClosingElement(jsxIdentifier('SvgIcon')),
+    [jsx],
+    false
   );
-  
-  ${variables.exports};
+
+  return tpl`${imports}
+import SvgIcon, { SvgIconProps } from '@mui/material/SvgIcon';
+${interfaces}
+
+function ${componentName}(props: SvgIconProps) {
+  return ${wrappedJsx};
+}
+
+${exports}
   `;
 };
 
