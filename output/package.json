@@ -1,6 +1,6 @@
 {
   "name": "@growthx-club/icons",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Package for storing all the icons used across the GrowthX Platform",
   "type": "module",
   "repository": {
