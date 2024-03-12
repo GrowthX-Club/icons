@@ -5,6 +5,12 @@ const {
   jsxIdentifier,
   jsxOpeningElement,
   jsxSpreadAttribute,
+  arrayExpression,
+  jsxAttribute,
+  jsxExpressionContainer,
+  objectExpression,
+  objectProperty,
+  stringLiteral,
 } = require('@babel/types');
 const template = (
   { imports, interfaces, componentName, props, jsx, exports },
@@ -13,6 +19,18 @@ const template = (
   const wrappedJsx = jsxElement(
     jsxOpeningElement(jsxIdentifier('Box'), [
       jsxSpreadAttribute(identifier('props')),
+      jsxAttribute(
+        jsxIdentifier('sx'),
+        jsxExpressionContainer(
+          arrayExpression([
+            objectExpression([
+              objectProperty(identifier('width'), stringLiteral('38px')),
+              objectProperty(identifier('height'), stringLiteral('38px')),
+            ]),
+            identifier('props?.sx ?? {}'),
+          ])
+        )
+      ),
     ]),
     jsxClosingElement(jsxIdentifier('Box')),
     [jsx],
@@ -20,11 +38,17 @@ const template = (
   );
 
   return tpl`${imports}
-import Box,{ BoxProps } from '@mui/material/Box';
+import Box, { BoxProps } from '@mui/material/Box';
+import { SystemStyleObject } from '@mui/system';
+import { Theme } from '@mui/material';
+
+interface Props extends BoxProps {
+  sx?: SystemStyleObject<Theme> | ((theme: Theme) => SystemStyleObject<Theme>);
+}
 
 ${interfaces}
 
-function ${componentName}(props: BoxProps) {
+function ${componentName}(props: Props) {
   return ${wrappedJsx};
 }
 
