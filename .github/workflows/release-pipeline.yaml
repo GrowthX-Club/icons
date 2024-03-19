@@ -20,7 +20,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - run: npm ci;
       - run: npm run convert-svg
-      - run: pushd output; npm ci; npm run build; npm version patch; popd;
+      - run: pushd output; npm ci; npm run build; popd;
       - run: cp output/package.json dist/
       - run: npm publish ./dist
         env:
