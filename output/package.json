@@ -15,11 +15,13 @@
     "@growthx-club:registry": "https://npm.pkg.github.com"
   },
   "peerDependencies": {
-    "@types/react": "^18.2.64",
-    "react": "^18.2.0",
-    "@mui/material": "^5.15.12"
+    "@mui/material": "^5.15.12",
+    "react": "^18.2.0"
   },
   "scripts": {
     "build": "tsc --outDir ../dist"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.67"
   }
 }
