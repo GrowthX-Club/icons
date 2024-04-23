@@ -2,4 +2,7 @@ node_modules/
 dist/
 .env
 .DS_Store
-output/**/*[.tsx,.ts,.js,.jsx]
+output/**/*.tsx
+output/**/*.ts
+output/**/*.js
+output/**/*.jsx
