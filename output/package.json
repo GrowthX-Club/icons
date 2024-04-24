@@ -1,24 +1,8 @@
 {
   "name": "@growthx-club/icons",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "Package for storing all the icons used across the GrowthX Platform",
   "type": "module",
-  "exports": {
-    "./actions": "./actions/index.js",
-    "./actions/*": "./actions/*.js",
-    "./attachments": "./attachments/index.js",
-    "./attachments/*": "./attachments/*.js",
-    "./editor": "./editor/index.js",
-    "./editor/*": "./editor/*.js",
-    "./external": "./external/index.js",
-    "./external/*": "./external/*.js",
-    "./logo": "./logo/index.js",
-    "./logo/*": "./logo/*.js",
-    "./misc": "./misc/index.js",
-    "./misc/*": "./misc/*.js",
-    "./monochrome": "./monochrome/index.js",
-    "./monochrome/*": "./monochrome/*.js"
-  },
   "repository": {
     "url": "git+https://github.com/GrowthX-Club/icons.git"
   },
