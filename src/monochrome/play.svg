@@ -4,8 +4,8 @@
         stroke="var(--primary-stroke, #CCCCCC)"
         stroke-width="var(--primary-stroke-width, 0.557143)" />
     <path d="M9.9375 7.5L6.28125 9.61094L6.28125 5.38906L9.9375 7.5Z"
-        fill="var(--primary-fill, #CCCCCC)"
-        stroke="var(--primary-stroke, none)"
-        stroke-width="var(--primary-stroke-width, 1.2)"
+        fill="var(--secondary-fill, #CCCCCC)"
+        stroke="var(--secondary-stroke, none)"
+        stroke-width="var(--secondary-stroke-width, 1.2)"
     />
 </svg>
