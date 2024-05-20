@@ -1,8 +1,7 @@
 {
   "name": "@growthx-club/icons",
-  "version": "1.0.25",
+  "version": "1.0.26",
   "description": "Package for storing all the icons used across the GrowthX Platform",
-  "type": "module",
   "repository": {
     "url": "git+https://github.com/GrowthX-Club/icons.git"
   },
@@ -18,8 +17,20 @@
     "@mui/material": "^5.15.12",
     "react": "^18.2.0"
   },
+  "exports": {
+    "./*": {
+      "import": "./esm/*/index.mjs",
+      "require": "./cjs/*/index.cjs",
+      "types": "./types/*/index.d.ts"
+    },
+    "./*.js": {
+      "import": "./esm/*.mjs",
+      "require": "./cjs/*.cjs",
+      "types": "./types/*.d.ts"
+    }
+  },
   "scripts": {
-    "build": "tsc --outDir ../dist"
+    "build:types": "tsc -p tsconfig.types.json"
   },
   "devDependencies": {
     "@types/react": "^18.2.67"

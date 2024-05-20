@@ -38,7 +38,7 @@ const template = (
   );
 
   return tpl`${imports}
-import Box, { BoxProps } from '@mui/material/Box';
+import { Box, BoxProps } from '@mui/material';
 import { SystemStyleObject } from '@mui/system';
 import { Theme } from '@mui/material';
 
