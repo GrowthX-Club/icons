@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
     <path
         d="M12.9548 22.6602L12.0076 26.7482C11.9749 26.8977 11.976 27.0525 12.0109 27.2015C12.0457 27.3504 12.1134 27.4897 12.2089 27.6092C12.3045 27.7286 12.4255 27.8252 12.5632 27.8919C12.7009 27.9586 12.8517 27.9937 13.0047 27.9946C13.0759 28.0023 13.1478 28.0023 13.219 27.9946L17.332 27.0473L25.2289 19.1803L20.8218 14.7832L12.9548 22.6602Z"
-        fill="var(--secondary-fill, white)"
-        stroke="var(--secondary-stroke, none)"
-        stroke-width="var(--secondary-stroke-width, none)" />
+        fill="var(--primary-fill, white)"
+        stroke="var(--primary-stroke, none)"
+        stroke-width="var(--primary-stroke-width, none)" />
     <path
         d="M27.7107 15.2418L24.7693 12.3004C24.5759 12.108 24.3142 12 24.0414 12C23.7686 12 23.507 12.108 23.3136 12.3004L21.6784 13.9356L26.0805 18.3378L27.7157 16.7025C27.8114 16.6064 27.8872 16.4923 27.9387 16.3668C27.9903 16.2413 28.0166 16.1068 28.0161 15.9711C28.0157 15.8355 27.9884 15.7012 27.936 15.5761C27.8836 15.4509 27.8071 15.3373 27.7107 15.2418Z"
-        fill="var(--secondary-fill, white)"
-        stroke="var(--secondary-stroke, none)"
-        stroke-width="var(--secondary-stroke-width, none)" />
+        fill="var(--primary-fill, white)"
+        stroke="var(--primary-stroke, none)"
+        stroke-width="var(--primary-stroke-width, none)" />
 </svg>
