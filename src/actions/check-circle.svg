@@ -1,0 +1,12 @@
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="9.99918" cy="10" r="8.65334"
+        fill="var(--secondary-fill, white)"
+        stroke="var(--secondary-stroke, white)"
+        stroke-width="var(--secondary-stroke-width, 1.21333)" />
+    <path
+        d="M5.99915 9.63867L8.24675 11.8863C8.29603 11.9355 8.37558 11.9366 8.42617 11.8887L13.2671 7.30253"
+        stroke-linecap="round" fill="var(--primary-fill, none)"
+        stroke="var(--primary-stroke, black)"
+        stroke-width="var(--primary-stroke-width, 1.5)" />
+</svg>
+    
