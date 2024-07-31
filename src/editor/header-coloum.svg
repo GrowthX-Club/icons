@@ -1,0 +1,33 @@
+<svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="9.60801" y="11.608" width="19.3629" height="15.784" rx="2.97093" stroke="#E4E4E4" stroke-width="1.21603"/>
+<path d="M12.5789 11.608H26C27.6408 11.608 28.9709 12.9381 28.9709 14.5789V16.0044H9.60801V14.5789C9.60801 12.9381 10.9381 11.608 12.5789 11.608Z" 
+fill="var(--primary-fill, none)"
+stroke="var(--primary-stroke, #E4E4E4)"
+stroke-width="var(--primary-stroke-width, 1.21603)"
+/>
+<path d="M14.3672 16.3684L14.3672 27.1053" 
+fill="var(--primary-fill, none)"
+stroke="var(--primary-stroke, #E4E4E4)"
+stroke-width="var(--primary-stroke-width, 1.21603)"
+/>
+<path d="M28.6836 16.3684H8.99938" 
+fill="var(--primary-fill, none)"
+stroke="var(--primary-stroke, #E4E4E4)"
+stroke-width="var(--primary-stroke-width, 1.21603)"
+/>
+<path d="M28.6836 21.7368H14.3678" 
+fill="var(--primary-fill, none)"
+stroke="var(--primary-stroke, #E4E4E4)"
+stroke-width="var(--primary-stroke-width, 1.21603)"
+/>
+<path d="M18.8438 16.3684V27.1053" 
+fill="var(--primary-fill, none)"
+stroke="var(--primary-stroke, #E4E4E4)"
+stroke-width="var(--primary-stroke-width, 1.21603)"
+/>
+<path d="M23.3164 16.3684V27.1053" 
+fill="var(--primary-fill, none)"
+stroke="var(--primary-stroke, #E4E4E4)"
+stroke-width="var(--primary-stroke-width, 1.21603)"
+/>
+</svg>
