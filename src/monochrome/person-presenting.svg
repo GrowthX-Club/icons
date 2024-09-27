@@ -1,0 +1,14 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="grommet-icons:workshop" clip-path="url(#clip0_9517_1704)">
+        <path id="Vector"
+            d="M19 7C19 7 14 14 6.5 14M6.5 14C4.5 14 1 15 1 19V23H12V19C12 16.5 15 18 19 11L17.5 9.5M6.5 14C7.42826 14 8.3185 13.6312 8.97487 12.9749C9.63125 12.3185 10 11.4283 10 10.5C10 9.57174 9.63125 8.6815 8.97487 8.02513C8.3185 7.36875 7.42826 7 6.5 7C5.57174 7 4.6815 7.36875 4.02513 8.02513C3.36875 8.6815 3 9.57174 3 10.5C3 11.4283 3.36875 12.3185 4.02513 12.9749C4.6815 13.6312 5.57174 14 6.5 14ZM3 5V2H23V16H20M11 1H15V3H11V1Z"
+            stroke="var(--primary-stroke, black)"
+            stroke-width="var(--primary-stroke-width, 1.2)"
+        />
+    </g>
+    <defs>
+        <clipPath id="clip0_9517_1704">
+            <rect width="24" height="24" fill="white" />
+        </clipPath>
+    </defs>
+</svg>
