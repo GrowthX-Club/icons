@@ -1,0 +1,16 @@
+<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="hugeicons:marketing">
+        <g id="Group">
+            <path id="Vector"
+                d="M16.5 16.5779C18.5251 16.5779 20.1667 13.2946 20.1667 9.24455C20.1667 5.19446 18.5251 1.91122 16.5 1.91122C14.475 1.91122 12.8333 5.19446 12.8333 9.24455C12.8333 13.2946 14.475 16.5779 16.5 16.5779Z"
+                stroke="var(--primary-stroke, black)"
+                stroke-width="var(--primary-stroke-width, 1.5)" stroke-linecap="round"
+                stroke-linejoin="round" />
+            <path id="Vector_2"
+                d="M16.5 1.91122C13.6556 1.91122 7.75959 4.09105 4.37343 5.44405C2.82243 6.06372 1.83334 7.57438 1.83334 9.24455C1.83334 10.9147 2.82334 12.4254 4.37343 13.0451C7.75959 14.3981 13.6556 16.5779 16.5 16.5779M10.0833 20.2446L8.30226 19.2637C7.35139 18.7375 6.58008 17.9383 6.08793 16.9693C5.59577 16.0004 5.40535 14.9061 5.54126 13.8279"
+                stroke="var(--primary-stroke, black)"
+                stroke-width="var(--primary-stroke-width, 1.5)"
+                stroke-linecap="round" stroke-linejoin="round" />
+        </g>
+    </g>
+</svg>

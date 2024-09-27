@@ -1,0 +1,10 @@
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="fluent:arrow-growth-20-regular">
+        <path id="Vector"
+            d="M14.2742 2.26958C15.0534 2.37624 15.625 3.167 15.625 4.09026V17L10.3125 13.8753L5 17V4.09026C5 3.167 5.57092 2.37624 6.35079 2.26958C8.98309 1.91014 11.6419 1.91014 14.2742 2.26958Z"
+            fill="var(--primary-fill, none)"
+            stroke="var(--primary-stroke, black)"
+            stroke-width="var(--primary-stroke-width, 1.4)"
+            stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+</svg>
