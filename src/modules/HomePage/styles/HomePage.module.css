@@ -1,0 +1,28 @@
+.container {
+  padding: 16px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.heading {
+  margin: 0;
+  padding: 0;
+  font-family: serif;
+}
+
+.link {
+  margin-left: auto;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}
+
+.paragraph {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}

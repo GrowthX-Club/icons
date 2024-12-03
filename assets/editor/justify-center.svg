@@ -1,0 +1,34 @@
+<svg
+  width="38"
+  height="38"
+  viewBox="0 0 38 38"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M19 11V27"
+    stroke-linecap="round"
+    stroke="var(--primary-stroke, black)"
+    stroke-width="var(--primary-stroke-width, 1.2)"
+  />
+  <rect
+    x="13.6"
+    y="13.6"
+    width="10.8"
+    height="2.8"
+    rx="1.4"
+    fill="var(--primary-fill, black)"
+    stroke="var(--primary-stroke, black)"
+    stroke-width="var(--primary-stroke-width, 1.2)"
+  />
+  <rect
+    x="14.6"
+    y="20.6"
+    width="8.8"
+    height="2.8"
+    rx="1.4"
+    fill="var(--primary-fill, black)"
+    stroke="var(--primary-stroke, black)"
+    stroke-width="var(--primary-stroke-width, 1.2)"
+  />
+</svg>

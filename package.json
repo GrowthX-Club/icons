@@ -3,35 +3,55 @@
   "version": "1.0.0",
   "description": "Package for storing all the icons used across the GrowthX Platform",
   "main": "index.js",
+  "types": "index.d.ts",
   "type": "module",
   "repository": {
     "url": "https://github.com/GrowthX-Club/icons"
   },
-  "scripts": {
-    "convert-svg": "svgr src --out-dir output/src --typescript --jsx-runtime automatic --template template.cjs --index-template index-template.cjs --expand-props none --no-dimensions",
-    "build": "vite build"
-  },
   "keywords": [
     "icons"
   ],
-  "author": "",
+  "author": "GrowthX",
   "license": "ISC",
-  "devDependencies": {
-    "@svgr/cli": "^8.1.0",
-    "@vitejs/plugin-react": "^4.2.1",
-    "esbuild-plugin-file-path-extensions": "^2.1.1-next.89d28f7.0",
-    "glob": "^10.3.15",
-    "typescript": "^5.4.2",
-    "vite": "^5.2.11",
-    "vite-plugin-copy": "^0.1.6"
+  "scripts": {
+    "dev": "vite --config vite.config.ts --port 3002",
+    "build": "vite build",
+    "preview": "vite preview",
+    "build:icons": "npm run generate && tsc --p ./tsconfig.build.json && vite build --config vite.config.lib.ts",
+    "publish": "npm run build:icons && npm run publish ./build",
+    "generate": "find lib -mindepth 1 ! -name 'package.json' -print -delete && svgr assets && npm run merge --path=lib",
+    "merge": "node ./scripts/merge-exports.js",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "prettier": {
     "arrowParens": "avoid",
     "proseWrap": "always",
     "singleQuote": true
   },
-  "peerDependencies": {
-    "@types/react": "^18.2.64",
-    "react": "^18.2.0"
+  "dependencies": {
+    "palasio-icons": "^0.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.23.1"
+  },
+  "devDependencies": {
+    "@svgr/cli": "^8.1.0",
+    "@types/node": "^20.14.2",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "barrel-exporter": "^1.0.7",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "eslint-plugin-storybook": "^0.8.0",
+    "glob": "^10.4.1",
+    "rimraf": "^5.0.7",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vite-plugin-copy": "^0.1.6",
+    "vite-plugin-dts": "^3.9.1"
   }
 }

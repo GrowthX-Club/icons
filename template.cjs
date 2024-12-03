@@ -1,59 +1,30 @@
-const {
-  identifier,
-  jsxClosingElement,
-  jsxElement,
-  jsxIdentifier,
-  jsxOpeningElement,
-  jsxSpreadAttribute,
-  arrayExpression,
-  jsxAttribute,
-  jsxExpressionContainer,
-  objectExpression,
-  objectProperty,
-  stringLiteral,
-} = require('@babel/types');
-const template = (
-  { imports, interfaces, componentName, props, jsx, exports },
-  { tpl }
-) => {
-  const wrappedJsx = jsxElement(
-    jsxOpeningElement(jsxIdentifier('Box'), [
-      jsxSpreadAttribute(identifier('props')),
-      jsxAttribute(
-        jsxIdentifier('sx'),
-        jsxExpressionContainer(
-          arrayExpression([
-            objectExpression([
-              objectProperty(identifier('width'), stringLiteral('38px')),
-              objectProperty(identifier('height'), stringLiteral('38px')),
-            ]),
-            identifier('props?.sx ?? {}'),
-          ])
-        )
-      ),
-    ]),
-    jsxClosingElement(jsxIdentifier('Box')),
-    [jsx],
-    false
-  );
+const template = (variables, { tpl, options }) => {
+  const componentName = variables.componentName.substring(3);
 
-  return tpl`${imports}
-import { Box, BoxProps } from '@mui/material';
-import { SystemStyleObject } from '@mui/system';
-import { Theme } from '@mui/material';
+  const dir = options.state.filePath.split('/').slice(1, -1).join('/');
 
-interface Props extends BoxProps {
-  sx?: SystemStyleObject<Theme> | ((theme: Theme) => SystemStyleObject<Theme>);
+  const relativePath = `/${dir}/${componentName}`.replace('//', '/');
+
+  return tpl`
+import { SVGProps } from "react";
+
+interface IconProps extends SVGProps<SVGSVGElement> {
+  primaryColor?: string,
+  secondaryColor?: string
 }
 
-${interfaces}
+${variables.interfaces};
 
-function ${componentName}(props: Props) {
-  return ${wrappedJsx};
-}
+export const ${componentName} = (props: IconProps) => (
+  ${variables.jsx}
+);
 
-${exports}
-  `;
+
+
+${componentName}.path = "${relativePath}"
+
+export default ${componentName}
+
+`;
 };
-
 module.exports = template;

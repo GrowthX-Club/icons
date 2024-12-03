@@ -1,0 +1,21 @@
+<svg
+  width="15"
+  height="15"
+  viewBox="0 0 15 15"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <circle
+    cx="7.5"
+    cy="7.5"
+    r="6.22143"
+    stroke="var(--primary-stroke, #CCCCCC)"
+    stroke-width="var(--primary-stroke-width, 0.557143)"
+  />
+  <path
+    d="M9.9375 7.5L6.28125 9.61094L6.28125 5.38906L9.9375 7.5Z"
+    fill="var(--secondary-fill, #CCCCCC)"
+    stroke="var(--secondary-stroke, none)"
+    stroke-width="var(--secondary-stroke-width, 1.2)"
+  />
+</svg>

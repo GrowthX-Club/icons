@@ -1,0 +1,14 @@
+<svg
+  width="38"
+  height="38"
+  viewBox="0 0 38 38"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M14.4972 16.593V14.8182H22.8594V16.593H19.7422V25H17.6143V16.593H14.4972Z"
+    fill="var(--primary-fill, black)"
+    stroke="var(--primary-stroke, none)"
+    stroke-width="var(--primary-stroke-width, 0)"
+  />
+</svg>

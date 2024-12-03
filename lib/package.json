@@ -1,0 +1,35 @@
+{
+  "name": "@growthx-club/icons",
+  "private": true,
+  "version": "1.0.9",
+  "author": "GrowthX",
+  "license": "ISC",
+  "description": "Package for storing all the icons used across the GrowthX Platform",
+  "type": "module",
+  "main": "./esm/index.mjs",
+  "types": "./types/index.d.ts",
+  "repository": {
+    "url": "git+https://github.com/GrowthX-Club/icons.git"
+  },
+  "keywords": [
+    "icons"
+  ],
+  "publishConfig": {
+    "@growthx-club:registry": "https://npm.pkg.github.com"
+  },
+  "exports": {
+    ".": {
+      "import": "./esm/index.mjs",
+      "require": "./cjs/index.cjs",
+      "types": "./types/index.d.ts"
+    },
+    "./*": {
+      "import": "./esm/*.mjs",
+      "require": "./cjs/*.cjs",
+      "types": "./types/*.d.ts"
+    }
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  }
+}

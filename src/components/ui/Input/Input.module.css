@@ -1,0 +1,16 @@
+.base {
+  background: transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 0;
+  /* border-style: solid; */
+  min-width: 600px;
+  border: 1px solid #000;
+}
+
+.base:hover,
+.base:active,
+.base:focus-visible {
+  border: 1px solid #006769;
+  border-radius: 0;
+  outline: 0;
+}

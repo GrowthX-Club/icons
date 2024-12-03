@@ -1,8 +1,9 @@
 node_modules/
 dist/
+build/
 .env
 .DS_Store
-output/**/*.tsx
-output/**/*.ts
-output/**/*.js
-output/**/*.jsx
+lib/**/*.tsx
+lib/**/*.ts
+lib/**/*.js
+lib/**/*.jsx
