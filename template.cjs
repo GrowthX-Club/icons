@@ -27,7 +27,7 @@ const template = (
               objectProperty(identifier('width'), stringLiteral('38px')),
               objectProperty(identifier('height'), stringLiteral('38px')),
             ]),
-            identifier('props?.sx ?? {}'),
+            identifier('...Array.isArray(props?.sx) ? props?.sx : [props?.sx]'),
           ])
         )
       ),
@@ -39,12 +39,7 @@ const template = (
 
   return tpl`${imports}
 import { Box, BoxProps } from '@mui/material';
-import { SystemStyleObject } from '@mui/system';
-import { Theme } from '@mui/material';
-
-interface Props extends BoxProps {
-  sx?: SystemStyleObject<Theme> | ((theme: Theme) => SystemStyleObject<Theme>);
-}
+interface Props extends BoxProps {}
 
 ${interfaces}
 
