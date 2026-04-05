@@ -8,6 +8,7 @@ const {
   jsxIdentifier,
   jsxOpeningElement,
   jsxSpreadAttribute,
+  logicalExpression,
   objectExpression,
   objectProperty,
   spreadElement,
@@ -31,8 +32,14 @@ const template = (
         jsxExpressionContainer(
           objectExpression([
             objectProperty(identifier('display'), stringLiteral('block')),
-            objectProperty(identifier('width'), stringLiteral('38px')),
-            objectProperty(identifier('height'), stringLiteral('38px')),
+            objectProperty(
+              identifier('width'),
+              logicalExpression('??', identifier('width'), stringLiteral('38px'))
+            ),
+            objectProperty(
+              identifier('height'),
+              logicalExpression('??', identifier('height'), stringLiteral('38px'))
+            ),
             spreadElement(identifier('s')),
             spreadElement(identifier('style')),
           ])
@@ -51,15 +58,18 @@ type IconCSSProperties = CSSProperties &
   Record<\`--\${string}\`, string | number | undefined>;
 type SxValue = IconCSSProperties | null | undefined | false;
 type SxProp = SxValue | SxValue[];
+type IconSize = CSSProperties['width'];
 
 interface Props extends Omit<HTMLAttributes<HTMLDivElement>, 'style'> {
   sx?: SxProp;
   style?: IconCSSProperties;
+  width?: IconSize;
+  height?: IconSize;
 }
 
 ${interfaces}
 
-function ${componentName}({ sx, style, ...props }: Props) {
+function ${componentName}({ sx, style, width, height, ...props }: Props) {
   const s = Array.isArray(sx) ? Object.assign({}, ...sx.filter(Boolean)) : (sx ?? {});
   return ${wrappedJsx};
 }
