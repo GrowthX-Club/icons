@@ -1,49 +1,88 @@
+const babelTemplate = require('@babel/template').smart;
 const {
+  cloneNode,
   identifier,
+  jsxAttribute,
   jsxClosingElement,
   jsxElement,
+  jsxExpressionContainer,
   jsxIdentifier,
   jsxOpeningElement,
   jsxSpreadAttribute,
-  arrayExpression,
-  jsxAttribute,
-  jsxExpressionContainer,
+  logicalExpression,
   objectExpression,
   objectProperty,
+  spreadElement,
   stringLiteral,
 } = require('@babel/types');
+
 const template = (
-  { imports, interfaces, componentName, props, jsx, exports },
+  { imports, interfaces, componentName, jsx, exports },
   { tpl }
 ) => {
+  const astTpl = babelTemplate({
+    plugins: ['jsx', 'typescript'],
+    preserveComments: true,
+    syntacticPlaceholders: false,
+  }).ast;
+  const wrappedSvg = cloneNode(jsx, true);
+  wrappedSvg.openingElement.attributes = [
+    ...wrappedSvg.openingElement.attributes,
+    jsxAttribute(
+      jsxIdentifier('style'),
+      jsxExpressionContainer(identifier('svgS'))
+    ),
+  ];
   const wrappedJsx = jsxElement(
-    jsxOpeningElement(jsxIdentifier('Box'), [
+    jsxOpeningElement(jsxIdentifier('div'), [
       jsxSpreadAttribute(identifier('props')),
       jsxAttribute(
-        jsxIdentifier('sx'),
+        jsxIdentifier('style'),
         jsxExpressionContainer(
-          arrayExpression([
-            objectExpression([
-              objectProperty(identifier('width'), stringLiteral('38px')),
-              objectProperty(identifier('height'), stringLiteral('38px')),
-            ]),
-            identifier('...Array.isArray(props?.sx) ? props?.sx : [props?.sx]'),
+          objectExpression([
+            objectProperty(identifier('display'), stringLiteral('block')),
+            objectProperty(
+              identifier('width'),
+              logicalExpression('??', identifier('width'), stringLiteral('38px'))
+            ),
+            objectProperty(
+              identifier('height'),
+              logicalExpression('??', identifier('height'), stringLiteral('38px'))
+            ),
+            spreadElement(identifier('s')),
+            spreadElement(identifier('style')),
           ])
         )
       ),
     ]),
-    jsxClosingElement(jsxIdentifier('Box')),
-    [jsx],
+    jsxClosingElement(jsxIdentifier('div')),
+    [wrappedSvg],
     false
   );
 
-  return tpl`${imports}
-import { Box, BoxProps } from '@mui/material';
-interface Props extends BoxProps {}
+  return astTpl`${imports}
+import type { CSSProperties, HTMLAttributes } from 'react';
+
+type IconCSSProperties = CSSProperties &
+  Record<\`--\${string}\`, string | number | undefined>;
+type IconSxObject = IconCSSProperties & { svg?: IconCSSProperties };
+type SxValue = IconSxObject | null | undefined | false;
+type SxProp = SxValue | SxValue[];
+type IconSize = CSSProperties['width'];
+
+interface Props extends Omit<HTMLAttributes<HTMLDivElement>, 'style'> {
+  sx?: SxProp;
+  style?: IconCSSProperties;
+  width?: IconSize;
+  height?: IconSize;
+}
 
 ${interfaces}
 
-function ${componentName}(props: Props) {
+function ${componentName}({ sx, style, width, height, ...props }: Props) {
+  const sxItems = (Array.isArray(sx) ? sx : [sx]).filter(Boolean) as IconSxObject[];
+  const s = Object.assign({}, ...sxItems.map(({ svg, ...root }) => root));
+  const svgS = Object.assign({}, ...sxItems.map(({ svg }) => svg).filter(Boolean));
   return ${wrappedJsx};
 }
 

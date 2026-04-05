@@ -26,7 +26,7 @@ export default defineConfig({
       entry: files,
     },
     rollupOptions: {
-      external: ['@mui/material', 'react', 'react/jsx-runtime'],
+      external: ['react', 'react/jsx-runtime'],
       input: files,
       output: [
         {
