@@ -1,5 +1,6 @@
 const babelTemplate = require('@babel/template').smart;
 const {
+  cloneNode,
   identifier,
   jsxAttribute,
   jsxClosingElement,
@@ -24,6 +25,14 @@ const template = (
     preserveComments: true,
     syntacticPlaceholders: false,
   }).ast;
+  const wrappedSvg = cloneNode(jsx, true);
+  wrappedSvg.openingElement.attributes = [
+    ...wrappedSvg.openingElement.attributes,
+    jsxAttribute(
+      jsxIdentifier('style'),
+      jsxExpressionContainer(identifier('svgS'))
+    ),
+  ];
   const wrappedJsx = jsxElement(
     jsxOpeningElement(jsxIdentifier('div'), [
       jsxSpreadAttribute(identifier('props')),
@@ -47,7 +56,7 @@ const template = (
       ),
     ]),
     jsxClosingElement(jsxIdentifier('div')),
-    [jsx],
+    [wrappedSvg],
     false
   );
 
@@ -56,7 +65,8 @@ import type { CSSProperties, HTMLAttributes } from 'react';
 
 type IconCSSProperties = CSSProperties &
   Record<\`--\${string}\`, string | number | undefined>;
-type SxValue = IconCSSProperties | null | undefined | false;
+type IconSxObject = IconCSSProperties & { svg?: IconCSSProperties };
+type SxValue = IconSxObject | null | undefined | false;
 type SxProp = SxValue | SxValue[];
 type IconSize = CSSProperties['width'];
 
@@ -70,7 +80,9 @@ interface Props extends Omit<HTMLAttributes<HTMLDivElement>, 'style'> {
 ${interfaces}
 
 function ${componentName}({ sx, style, width, height, ...props }: Props) {
-  const s = Array.isArray(sx) ? Object.assign({}, ...sx.filter(Boolean)) : (sx ?? {});
+  const sxItems = (Array.isArray(sx) ? sx : [sx]).filter(Boolean) as IconSxObject[];
+  const s = Object.assign({}, ...sxItems.map(({ svg, ...root }) => root));
+  const svgS = Object.assign({}, ...sxItems.map(({ svg }) => svg).filter(Boolean));
   return ${wrappedJsx};
 }
 
