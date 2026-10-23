@@ -2,7 +2,7 @@ import react from '@vitejs/plugin-react';
 import { glob } from 'glob';
 import { extname, relative } from 'path';
 import { defineConfig } from 'vite';
-import { copy } from 'vite-plugin-copy';
+import { copyFileSync, mkdirSync } from 'node:fs';
 const files = Object.fromEntries(
   (
     await glob('output/src/**/*{.ts,.tsx}', {
@@ -19,7 +19,16 @@ const files = Object.fromEntries(
 );
 
 export default defineConfig({
-  plugins: [react(), copy([{ src: 'output/package.json', dest: 'dist/' }])],
+  plugins: [
+    react(),
+    {
+      name: 'copy-package-manifest',
+      closeBundle() {
+        mkdirSync('dist', { recursive: true });
+        copyFileSync('output/package.json', 'dist/package.json');
+      },
+    },
+  ],
   build: {
     emptyOutDir: true,
     lib: {
